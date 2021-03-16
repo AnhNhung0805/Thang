@@ -1,0 +1,96 @@
+#footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: black;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    .address {
+        &__title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        &__content {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+    }
+    .category {
+        &__title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        &__content {
+            margin-top: 10px;
+            line-height: 1.5;
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: green;
+                }
+            }
+        }
+    }
+    .policy {
+        &__title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        &__content {
+            margin-top: 10px;
+            line-height: 1.5;
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    color: green;
+                }
+            }
+        }
+    }
+    .contact {
+        &__title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .form-group {
+            margin: 10px 0;
+            input {
+                padding: 10px;
+            }
+            button {
+                padding: 12px 6px;
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 2px;
+                &:hover {
+                    background-color: white;
+                    color: green;
+                }
+            }
+        }
+        .social {
+            p {
+                margin-bottom: 5px;
+            }
+            a {
+                img {
+                    width: 30px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #footer {
+        display: block;
+        div {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+}

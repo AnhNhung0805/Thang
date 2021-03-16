@@ -1,0 +1,24 @@
+@import 'variable.scss';
+@import 'header.scss';
+@import 'slide.scss';
+@import 'product.scss';
+@import 'feature.scss';
+@import 'footer.scss';
+@import 'cart.scss';
+
+.license {
+    background-color: rgb(245, 245, 247);
+    margin: 0 auto;
+    padding: 12px 0;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+    p {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .license {
+        font-size: 0.6rem;
+    }
+}

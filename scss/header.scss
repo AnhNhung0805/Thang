@@ -1,0 +1,275 @@
+.intro {
+    background-color: green;
+    color: white;
+    margin: 0 auto;
+    padding: 12px 0;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+@media only screen and (max-width: 660px) {
+    .intro {
+        font-size: 0.6rem;
+    }
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    &__logo {
+        margin: auto;
+        a {
+            text-decoration: none;
+            img {
+                width: 100px;
+                vertical-align: middle;
+            }
+            p {
+                display: inline;
+                font-size: 1.4rem;
+                font-family: 'Fascinate', cursive;
+                margin-left: 6px;
+                color: black;
+            }
+        }
+    }
+    &__search {
+        margin: auto;
+        .search-box {
+            input {
+                padding: 12px;
+                width: 400px;
+                border: 1px solid black;
+            }
+            button {
+                position: relative;
+                right: 35px;
+                padding: 16px 6px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+    &__right {
+        margin: auto;
+        button {
+            padding: 12px;
+            background-color: transparent;
+            border: 1px solid black;
+            cursor: pointer;
+            &:hover {
+                background-color: black;
+                color: white;
+            }
+        }
+        .phone {
+            p {
+                display: inline;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+        }
+        .user {
+            display: inline;
+            &__content {
+                padding: 14px;
+                display: none;
+                position: absolute;
+                right: 70px;
+                background-color: white;
+                border: 1px solid black;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    display: block;
+                    &:first-of-type {
+                        margin-bottom: 10px;
+                    }
+                    &:hover {
+                        color: green;
+                    }
+                }
+            }
+            &:hover {
+                .user__content {
+                    display: block;
+                }
+            }
+        }
+        .cart {
+            a {
+                text-decoration: none;
+                i {
+                    color: black;
+                }
+                span {
+                    padding: 0 4px;
+                    color: red;
+                    font-weight: bold;
+                    display: none;
+                }
+            }
+            &:hover {
+                i {
+                    display: none;
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .head {
+        &__logo {
+            margin-left: -20px;
+            a {
+                img {
+                    width: 60px;
+                }
+                p {
+                    font-size: 0.8rem;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &__search {
+            .search-box {
+                position: relative;
+                margin: auto;
+                input {
+                    width: 250px;
+                    padding: 8px;
+                }
+                button {
+                    padding: 0;
+                    position: absolute;
+                    right: 10px;
+                    top: 30%;
+                }
+            }
+        }
+        &__right {
+            margin-right: -24px;
+            padding: 0;
+            .phone {
+                p {
+                    display: none;
+                }
+                
+            }
+            .user {
+                &:hover {
+                    .user__content {
+                        display: none;
+                    }
+                }
+            }
+            button {
+                padding: 8px;
+            }
+        }
+    }
+}
+
+.menu {
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    .icon {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        padding: 14px;
+        &:hover {
+            background-color: green;
+        }
+        &.active {
+            background-color: green;
+        }
+    }
+    .dropdown {
+        overflow: hidden;
+        &__btn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        &__content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            a {
+                float: none;
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        &:hover {
+            background-color: green;
+            .dropdown__content {
+                display: block;
+            }
+        }
+    }
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 660px) {
+    .menu {
+        display: block;
+        .item {
+            display: none;
+        }
+        .icon {
+            display: inline;
+            float: right;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .menu {
+        &.responsive {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .item {
+                float: left;
+                display: block;
+                text-align: left;
+            }
+        }
+    }
+}

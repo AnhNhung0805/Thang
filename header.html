@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThangLH2 Football Shoes</title>
+</head>
+<body>
+    <div class="intro">
+        <marquee behavior="" direction=""><p>Ở ĐÂY CÓ BÁN GIÀY PHỦI CHÍNH HÃNG NGON HƠN NGƯỜI YÊU CŨ CỦA BẠN !</p></marquee>
+    </div>
+    <div class="head">
+        <div class="head__logo">
+            <a href="/index.html">
+                <img src="icons/logo.png" alt="Logo">
+                <p>THANGLH2</p>
+            </a>
+        </div>
+        <div class="head__search">
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm..." id="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        <div class="head__right">
+            <button class="phone">
+                <p>Gọi ngay 0333061096</p>
+                <i class="fas fa-phone"></i>
+            </button>
+            <div class="user">
+                <button class="user__btn">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="user__content">
+                    <a href="#">Đăng nhập</a>
+                    <a href="#">Đăng ký</a>
+                </div>
+            </div>
+            <button class="cart">
+                <a href="/cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>0</span>
+                </a>
+            </button>
+        </div>
+    </div>
+    <div class="menu" id="myMenu">
+        <a class="active item" href="/index.html">TRANG CHỦ</a>
+        <a class="item" href="#">SẢN PHẨM</a>
+        <div class="dropdown item">
+            <button class="dropdown__btn">THƯƠNG HIỆU
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown__content">
+                <a href="#">Adidas</a>
+                <a href="#">Nike</a>
+                <a href="#">Puma</a>
+                <a href="#">Mizuno</a>
+            </div>
+        </div>
+        <div class="dropdown item">
+            <button class="dropdown__btn">PHỤ KIỆN
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown__content">
+                <a href="#">Tất</a>
+                <a href="#">Balo, Túi</a>
+            </div>
+        </div>
+        <div class="dropdown item">
+            <button class="dropdown__btn">KHUYẾN MÃI
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown__content">
+                <a href="#">Đồng Giá</a>
+                <a href="#">Cá Tháng Tư</a>
+            </div>
+        </div>
+        <a class="item" href="#">TIN TỨC</a>
+        <a class="item" href="#">LIÊN HỆ</a>
+        <a class="icon" href="javascript:void(0);" onclick="menuRes()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <script>
+        window.onscroll = function() {fixedMenu()};
+        
+        var navbar = document.getElementById("myMenu");
+        var sticky = navbar.offsetTop;
+        
+        function fixedMenu() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
+    <script>
+        function menuRes() {
+            var x = document.getElementById("myMenu");
+            if (x.className === "menu") {
+                x.className += " responsive";
+            } else {
+                x.className = "menu";
+            }
+        }
+    </script>
+</body>
+</html>

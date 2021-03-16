@@ -1,0 +1,169 @@
+.feature {
+    margin-top: 10px;
+    &__exp {
+        padding: 60px;
+        p {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        hr {
+            margin: 0 auto;
+            width: 20%;
+            color: black;
+            font-weight: bold;
+        }
+        &__items {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            .item {
+                max-width: 120px;
+                min-height: 220px;
+                img {
+                    width: 120px;
+                    border-radius: 50%;
+                    transition: 0.5s all ease-in-out;
+                    &:hover {
+                        transform: scale(1.1);
+                        width: 122px;
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    display: none;
+                }
+                &:hover {
+                    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-size: 200% 100%;
+                    background-position: 100%;
+                    transition: background-position 600ms ease;
+                    p {
+                        display: block;
+                        background-position: 0 100%;
+                    }
+                }
+            }
+        }
+    }
+    &__news {
+        padding: 60px;
+        background-color: rgb(245, 245, 247);
+        position: relative;
+        p {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        hr {
+            margin: 0 auto;
+            width: 8%;
+            color: black;
+            font-weight: bold;
+        }
+        &__items {
+            display: flex;
+            justify-content: space-around;
+            .item {
+                text-decoration: none;
+                color: black;
+                max-width: 350px;
+                margin-top: 30px;
+                background-color: white;
+                overflow: hidden;
+                &:hover {
+                    box-shadow: 0 20px 25px rgba(0,0,0,0.7);
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+                img {
+                    width: 350px;
+                    transition: 0.5s all ease-in-out;
+                }
+                p {
+                    padding: 5px;
+                    &:first-of-type {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        &:hover {
+                            text-decoration: underline;
+                            color: green;
+                        }
+                    }
+                    &:last-child {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    &__feedback {
+        padding: 60px;
+        p {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2.4rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        hr {
+            margin: 0 auto;
+            width: 20%;
+            color: black;
+            font-weight: bold;
+        }
+        img {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .feature {
+        &__exp {
+            padding: 10px;
+            margin-top: 50px;
+            margin-bottom: -50px;
+            .item {
+                max-width: 70px;
+                img {
+                    width: 70px;
+                    &:hover {
+                        transform: scale(1.1);
+                        width: 75px;
+                    }
+                }
+                p {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        &__news {
+            padding: 10px;
+            &__items {
+                display: flex;
+                flex-direction: column;
+                .item {
+                    margin: 10px auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &__feedback {
+            padding: 20px;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+}
